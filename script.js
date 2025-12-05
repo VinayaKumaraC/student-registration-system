@@ -235,3 +235,4 @@ function addVerticalScrollIfNeeded() {
     tableWrapper.style.overflowY = "visible";
   }
 }
+
