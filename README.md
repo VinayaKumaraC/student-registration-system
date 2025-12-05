@@ -28,5 +28,9 @@ This project allows users to register student details, display them in a table f
 | JavaScript | DOM Manipulation + Validation + localStorage |
 
 
-## 🧩 File Structure
+🧩 File Structure
+
+📌 GitHub Repository Link
+https://github.com/VinayaKumaraC/student-registration-system
+
 
