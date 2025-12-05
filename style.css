@@ -1,0 +1,178 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #ffc371, #ff5f6d, #00c9ff, #92fe9d);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #222;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 0.95rem;
+}
+
+/* Main layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Left: form */
+.form-section,
+.table-section {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 1 280px;
+  min-width: 260px;
+}
+
+.form-section h2,
+.table-section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form styles */
+.form-control {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.form-control input {
+  padding: 0.45rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.error {
+  margin-top: 0.5rem;
+  color: #e53935;
+  font-size: 0.85rem;
+  min-height: 1.1rem;
+}
+
+/* Table styles */
+#tableWrapper {
+  margin-top: 0.5rem;
+  /* JS will add max-height / overflow when needed */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f1f1f1;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.action-btn {
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile ≤ 640px */
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet 641px–1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .table-section {
+    max-width: 100%;
+  }
+}
+
+/* Desktop ≥ 1025px */
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form-section {
+    max-width: 35%;
+  }
+
+  .table-section {
+    max-width: 65%;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Student Registration System</h1>
+    <p>
+      Register students with their details, edit or delete records, and keep
+      them saved in your browser even after refresh.
+    </p>
+  </header>
+
+  <main class="container">
+    <!-- Left side: Form -->
+    <section class="form-section">
+      <h2>Register New Student</h2>
+      <form id="studentForm">
+        <div class="form-control">
+          <label for="name">Student Name</label>
+          <input type="text" id="name" placeholder="Enter student name" required />
+        </div>
+
+        <div class="form-control">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" placeholder="Numbers only" required />
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email ID</label>
+          <input type="email" id="email" placeholder="Enter email" required />
+        </div>
+
+        <div class="form-control">
+          <label for="contact">Contact Number</label>
+          <input type="text" id="contact" placeholder="At least 10 digits" required />
+        </div>
+
+        <button type="submit" class="btn">Add / Update</button>
+        <p id="errorMessage" class="error"></p>
+      </form>
+    </section>
+
+    <!-- Right side: Display table -->
+    <section class="table-section">
+      <h2>Registered Students</h2>
+      <!-- Wrapper where scrollbar will be added dynamically via JS -->
+      <div id="tableWrapper">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>Contact No.</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsBody">
+            <!-- Rows added dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
